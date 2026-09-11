@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: cartify-ecommerce
+    runtime: node
+    plan: free
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
